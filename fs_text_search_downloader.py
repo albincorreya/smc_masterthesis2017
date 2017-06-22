@@ -24,7 +24,7 @@ token = "YOUR CLIENT_SECRET HERE"
 url = 'https://www.freesound.org/apiv2/oauth2/authorize/?client_id=' + client_id + \
 			'&response_type=code&state=xyz'
 
-webbrowser.open(url, new = 2)
+webbrowser.open(url, new = 2) #opens the url in a new tab in your default web browser automatically.
 
 code = raw_input('\nPlease go to: '+ url +'\nEnter the given code from the response: ')
 
