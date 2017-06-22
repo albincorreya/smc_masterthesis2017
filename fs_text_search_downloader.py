@@ -3,13 +3,14 @@
 A python script to do basic text search on freesound.org with tags and download the original
 sound files to the specified directory using oauth2.
 
-
+This script uses freesound-python client library to interact with the freesound.org api
 https://github.com/MTG/freesound-python
+
+
+Albin Andrew Correya
 '''
 
 #------------------------------------------------------------
-
-
 
 import ast,sys,os,time
 import freesound
@@ -63,7 +64,7 @@ for sound in results_pager:
 
 print "\n Finished downloading page one..."
 
-time.sleep(5)
+time.sleep(5) # used to delay the request process time since freesound api only allows 60 requests per minute.
 
 j = 1
 if pages>1:
@@ -78,5 +79,5 @@ if pages>1:
 				print '\n Downloading finsihed for sound >>', sound.id
 			print '\n Finished downloading page ',str(j+1)
 			j=j+1
-			time.sleep(5)
+			time.sleep(5)  # used to delay the request process time since freesound api only allows 60 requests per minute.
  
