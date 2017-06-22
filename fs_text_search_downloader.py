@@ -63,7 +63,7 @@ print "\n\t----- PAGE 1 -----"
 for sound in results_pager:
 	name = sound.name
 	sname = name.replace('/','')
-	sound.retrieve(sound.url,download_folder+str(sound.id)+'__'+sname+sound.type)
+	sound.retrieve(sound.url,download_folder+str(sound.id)+'__'+sname+ '.' +sound.type)
 	print '\n Downloading finsihed for sound >>', sound.id
 
 print "\n Finished downloading page one..."
@@ -79,7 +79,7 @@ if pages>1:
 			for sound in results_pager:
 				name = sound.name
 				sname = name.replace('/','')
-				sound.retrieve(sound.url,download_folder+str(sound.id)+'__'+sname+sound.type)
+				sound.retrieve(sound.url,download_folder+str(sound.id)+'__'+sname+ '.' +sound.type)
 				print '\n Downloading finsihed for sound >>', sound.id
 			print '\n Finished downloading page ',str(j+1)
 			j=j+1
