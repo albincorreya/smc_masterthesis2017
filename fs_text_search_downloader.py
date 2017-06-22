@@ -15,14 +15,18 @@ Albin Andrew Correya
 import ast,sys,os,time
 import freesound
 import subprocess
+import webbrowser
 
 
 client_id = "YOUR CLIENT_ID HERE"
 token = "YOUR CLIENT_SECRET HERE"
 
+url = 'https://www.freesound.org/apiv2/oauth2/authorize/?client_id=' + client_id + \
+			'&response_type=code&state=xyz'
 
-code = raw_input('\nPlease go to: https://www.freesound.org/apiv2/oauth2/authorize/?client_id=' + client_id + \
-			'&response_type=code&state=xyz \nand enter the given code: ')
+webbrowser.open(url, new = 2)
+
+code = raw_input('\nPlease go to: '+ url +'\nEnter the given code from the response: ')
 
 
 print '\n Authenticating:\n'
