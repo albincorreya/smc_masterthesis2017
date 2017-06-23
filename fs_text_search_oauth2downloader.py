@@ -52,7 +52,7 @@ download_folder = os.getcwd()+'/downloads/'
 text_query = raw_input('\nEnter your text query to search :')
 tag = raw_input('\n Enter the tag to filter :')
 
-results_pager = client.text_search(query=text_query,filter="tag:"+tag,\
+results_pager = client.text_search(query=text_query,filter="tag:"+tag+" duration:[2.0 TO 100.0]",\
 				fields="id,name,url,type",page_size=50)
 
 print "\nNum results:", results_pager.count
