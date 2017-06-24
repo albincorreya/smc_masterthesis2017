@@ -70,12 +70,9 @@ path = '/Users/Correya/desktop/Master_Thesis/freesound_dataset/client_download_f
 
 
 folders = os.listdir(path)
+
 if '.DS_Store' in folders:    #remove the hidden file in the folders in mac osx
 	folders.remove('.DS_Store')
-if 'Explosion' and 'Gunshot' in folders:
-	folders.remove('Explosion')
-	folders.remove('Gunshot')
-
 
 
 for folder in pbar(folders):
@@ -141,15 +138,4 @@ for folder in pbar(folders):
 print'\nFinished computing features for all the sounds in the dataset....'
 
 
-        
-
-
-
-
-
-
-
-
-
-
-
+    
