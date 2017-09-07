@@ -10,7 +10,7 @@ You can find it here -> https://github.com/AudioCommons/timbral_models.
 
 
 Use : pass the full directory path of you dataset to the script as command-line argument in the terminal.
-	python batchFeatureExtractor.py <your_path>
+	python multiclass_timbralfeature_extractor.py <your_path>
 
 -------
 Albin Andrew Correya
